@@ -1,17 +1,24 @@
+//insertar datos para simular una pila
 import { useEffect, useState } from "react";
 
 function EJEMPLOARREGLOS() {
+  
 
   // Estado para almacenar números
   const [elementos, setElementos] = useState([]);
 
   // Función para agregar números
   const agregarDato = () => {
+    console.log(elementos);
     const nuevoNumero = Math.floor(Math.random() * 50);
 
     setElementos([...elementos, nuevoNumero]);
   };
-
+//hook de efeco
+useEffect(()    =>   {
+  console.log("el arreglo de datos acutal es: ",elementos)
+,[elementos]  
+})
   // Función para recorrer el arreglo
   const recorrerArreglo = (elemento, index) => (
     <li key={index}>

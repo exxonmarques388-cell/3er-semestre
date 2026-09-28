@@ -6,7 +6,7 @@ function Pila() {
 
   // Agregar valores a la pila del arreglo
   const handlePush = (e) => {
-    e.preventDefault();
+   // e.preventDefault();
 
     if (inputValue.trim() === "") return;
 
